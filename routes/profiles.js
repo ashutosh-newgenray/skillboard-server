@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var ObjectId = require("mongodb").ObjectID;
 
 /* GET All Profiles. */
 router.get("/", async (req, res, next) => {
@@ -9,12 +10,12 @@ router.get("/", async (req, res, next) => {
 
 /* GET Profile by id.*/
 router.get("/u/:profileId", async (req, res, next) => {
-  console.log("profileId ", `${req.params.profileId}`);
   const resp = await req.app.DB.collection("profiles")
     .find({
-      id: parseInt(req.params.profileId),
+      _id: ObjectId(req.params.profileId),
     })
     .toArray();
+
   res.json(resp);
 });
 
