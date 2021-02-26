@@ -1,7 +1,9 @@
 var express = require("express");
 var router = express.Router();
 const chalk = require("chalk");
-const { format } = require("date-fns");
+const { format, add } = require("date-fns");
+const emailer = require("../bin/email");
+var ObjectId = require("mongodb").ObjectID;
 
 let DB;
 const log = console.log;
@@ -16,6 +18,57 @@ router.get("/", async (req, res, next) => {
 
 router.post("/schedule", async (req, res, next) => {
   DB = req.app.DB;
+  await main();
+  res.redirect("/jobs");
+});
+
+router.post("/request/feedbacks", async (req, res, next) => {
+  const requests = {};
+  const resp = await req.app.DB.collection("schedular_jobs")
+    .find({})
+    .sort({ "feedback_for.emp_id": 1 })
+    .toArray();
+  resp.forEach((item) => {
+    let empId = item.feedback_for.emp_id;
+    if (requests[empId]) {
+      requests[empId].skills.push(item.skill_code);
+    } else {
+      requests[empId] = {
+        jobId: item._id,
+        name: item.feedback_for.name,
+        email: item.feedback_for.email,
+        skills: [item.skill_code],
+        recipients: {},
+      };
+    }
+    item.feedback_from.map((recipient) => {
+      requests[empId].recipients[recipient.emp_id] = {
+        _id: recipient._id,
+        name: recipient.name,
+        email: recipient.email,
+      };
+    });
+  });
+  Object.values(requests).forEach((item) => {
+    let mailData = {
+      from: "ashutosh.iec13@gmail.com",
+      to: Object.values(item.recipients)
+        .map((recipient) => recipient.email)
+        .join(","),
+      subject: `Feedback request for ${item.name}`,
+      html: `<div>Hello, <p>feedback fro ${item.skills.join(" ")}</p></div>`,
+    };
+    emailer.sendMail(mailData);
+  });
+  // Update status of Schedular Jobs
+  await req.app.DB.collection("schedular_jobs").updateMany(
+    {
+      "feedback_for.emp_id": {
+        $in: Object.keys(requests).map((item) => parseInt(item)),
+      },
+    },
+    { $set: { status: 1 } }
+  );
   res.redirect("/jobs");
 });
 
@@ -45,7 +98,9 @@ async function getJobsForFeedbacks() {
   for (let i in listOfSkillsForExecution) {
     skill = listOfSkillsForExecution[i];
     log("Update event calendar with skills for next event");
+    /** UNCOMMENT THIS ON PROD */
     updateTaskCalendar(skill);
+
     log("Get Skill Group for ", skill);
     skillGroups = await getSkillGroups(skill);
     // Todo remove duplicate from skillGroups;
@@ -62,14 +117,22 @@ async function getJobsForFeedbacks() {
           log(chalk.red("> >"), profileArr);
           let profile = profileArr[l];
           let feedbackFrom = await getProfileToRequestFeedback(profile);
-          schedularJobs.push({
-            profile_code: skillProfiles[k].profile_code,
-            group_code: skillGroups[j],
-            skill_code: skill,
-            feedback_for: profile,
-            feedback_from: feedbackFrom,
-            status: 0,
-          });
+          const existingJobs = schedularJobs.filter(
+            (item) =>
+              item.feedback_for.emp_id === profile.emp_id &&
+              item.feedback_for.project_id === profile.project_id &&
+              item.skill_code === skill
+          );
+          if (!existingJobs.length) {
+            schedularJobs.push({
+              profile_code: skillProfiles[k].profile_code,
+              group_code: skillGroups[j],
+              skill_code: skill,
+              feedback_for: profile,
+              feedback_from: feedbackFrom,
+              status: 0,
+            });
+          }
         }
       }
     }
@@ -96,23 +159,6 @@ async function getSkillForExecution() {
     .toArray();
   return resp.length ? resp[0] : [];
 }
-
-/**
- * Get Skills
- * Table: skills
- * arguments : skill code
- * return : skill
- */
-async function getSkill(skillcode) {
-  return new Promise((resolve, reject) => {
-    resolve({
-      skill_code: "html",
-      skill_label: "HTML",
-      feedback_frequency: "MONTHLY",
-    });
-  });
-}
-module.exports = router;
 
 /**
  * Get Skill Group
@@ -245,6 +291,75 @@ async function updateSchedularJobs(jobs) {
  * Mark the task_calendar for the skill with next date
  * return null;
  */
-function updateTaskCalendar(skill) {}
+async function updateTaskCalendar(skill) {
+  //get feedback_frequency from skill
+  const feedbackFrequency = await DB.collection("skills")
+    .find(
+      {
+        skill_code: skill,
+      },
+      {
+        projection: {
+          feedback_frequency: 1,
+          _id: 0,
+        },
+      }
+    )
+    .toArray();
+  const nextDate = format(
+    add(new Date(), { days: feedbackFrequency[0].feedback_frequency }),
+    "dd-MM-yyyy"
+  );
+
+  log(
+    "Next event date for " +
+      chalk.green(skill) +
+      " is " +
+      chalk.yellow(nextDate)
+  );
+  //get events matching nextDate
+  const events = await DB.collection("event_calendar")
+    .find(
+      {
+        event_date: nextDate,
+      },
+      {
+        projection: {
+          _id: 1,
+        },
+      }
+    )
+    .limit(1)
+    .toArray();
+
+  // //if event exits update with new skill otherwise create new event
+  if (events[0]) {
+    log(
+      "Event for " +
+        chalk.yellow(nextDate) +
+        " already exists in event_calendar >>> Updating the event"
+    );
+    await DB.collection("event_calendar").updateOne(
+      {
+        _id: events[0]._id,
+      },
+      {
+        $push: {
+          skills: skill,
+        },
+      }
+    );
+  } else {
+    log(
+      "Event for " +
+        chalk.yellow(nextDate) +
+        " does not exist in event_calendar >>> Creating new event"
+    );
+    await DB.collection("event_calendar").insertOne({
+      event_date: nextDate,
+      skills: [skill],
+    });
+  }
+}
 
 module.exports = router;
