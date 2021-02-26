@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title  
+  div(class="container")
+    table(class=['responsive-table'])
+        caption List of Scheduled Jobs for Requesting Feedback
+        thead
+            tr
+                th(scope="col") Employee ID
+                th(scope="col") Project ID 
+                th(scope="col") Profile 
+                th(scope="col") Group    
+                th(scope="col") Skill
+                th(scope="col") Requests
+                th(scope="col") Status
+        each job in jobs
+            tbody
+                tr
+                    td= job.feedback_for.emp_id
+                    td= job.feedback_for.project_id
+                    td= job.profile_code
+                    td= job.group_code
+                    td= job.skill_code
+                    td= job.feedback_from.length
+                    td= job.status ? 'Completed': 'Not Started'
+  
+
+  

@@ -1,0 +1,68 @@
+[
+  {
+    "group_code": "architecture",
+    "group_label": "Architecture",
+    "skills": ["architecture", "hadoop", "sql_server"]
+  },
+  {
+    "group_code": "backend",
+    "group_label": "Backend",
+    "skills": [
+      "html",
+      "java",
+      "middleware",
+      "python",
+      "asp",
+      "asp.net",
+      "c#",
+      "python",
+      "node",
+      "dart"
+    ]
+  },
+  {
+    "group_code": "cloud",
+    "group_label": "Cloud",
+    "skills": "hadoop"
+  },
+  {
+    "group_code": "data_structure",
+    "group_label": "Data Structure",
+    "skills": ["algorithms", "analysis"]
+  },
+  {
+    "group_code": "database",
+    "group_label": "Database",
+    "skills": ["modeling", "mongodb", "mysql", "sql", "oracle"]
+  },
+  {
+    "group_code": "frontend",
+    "group_label": "Frontend",
+    "skills": ["html", "css", "jquery", "sas", "react", "vue", "angular"]
+  },
+  {
+    "group_code": "mobile",
+    "group_label": "Mobile",
+    "skills": ["react_native", "flutter"]
+  },
+  {
+    "group_code": "devops",
+    "group_label": "Devops",
+    "skills": ["azure", "aws", "pipeline"]
+  },
+  {
+    "group_code": "nfr",
+    "group_label": "NFR",
+    "skills": [" Performance", " Security", " SEO"]
+  },
+  {
+    "group_code": "microservices",
+    "group_label": "Microservices",
+    "skills": ["java", "python", "swagger"]
+  },
+  {
+    "group_code": "data_science",
+    "group_label": "Data Science",
+    "skills": []
+  }
+]

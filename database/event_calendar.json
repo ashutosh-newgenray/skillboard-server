@@ -1,0 +1,14 @@
+[
+  {
+    "event_date": "25-02-2021",
+    "skills": ["html", "css"]
+  },
+  {
+    "event_date": "26-02-2021",
+    "skills": ["html", "css"]
+  },
+  {
+    "event_date": "27-02-2021",
+    "skills": ["html", "css"]
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "profile_code": "ASDE1",
+    "profile_title": "Associate Software Development Engineer 1",
+    "skill_groups": [
+      { "skill_group_code": "frontend", "weightage": 40 },
+      { "skill_group_code": "backend", "weightage": 20 },
+      { "skill_group_code": "microservices", "weightage": 20 },
+      { "skill_group_code": "cloud", "weightage": 10 },
+      { "skill_group_code": "devops", "weightage": 10 }
+    ],
+    "is_active": true
+  },
+  {
+    "profile_code": "ASDE2",
+    "profile_title": "Associate Software Development Engineer 2",
+    "skill_groups": [
+      { "skill_group_code": "frontend", "weightage": 20 },
+      { "skill_group_code": "backend", "weightage": 30 },
+      { "skill_group_code": "microservices", "weightage": 30 },
+      { "skill_group_code": "cloud", "weightage": 10 },
+      { "skill_group_code": "devops", "weightage": 10 }
+    ],
+    "is_active": true
+  },
+  {
+    "profile_code": "XT1",
+    "profile_title": "Senior Associate Experience Technology 1",
+    "skill_groups": [
+      { "skill_group_code": "frontend", "weightage": 60 },
+      { "skill_group_code": "cloud", "weightage": 10 },
+      { "skill_group_code": "nfr", "weightage": 15 },
+      { "skill_group_code": "security", "weightage": 5 },
+      { "skill_group_code": "mobile", "weightage": 10 }
+    ],
+    "is_active": true
+  },
+  {
+    "profile_code": "XT2",
+    "profile_title": "Senior Associate Experience Technology 2",
+    "skill_groups": [
+      { "skill_group_code": "frontend", "weightage": 40 },
+      { "skill_group_code": "cloud", "weightage": 10 },
+      { "skill_group_code": "nfr", "weightage": 15 },
+      { "skill_group_code": "security", "weightage": 5 },
+      { "skill_group_code": "mobile", "weightage": 10 },
+      { "skill_group_code": "microservices", "weightage": 15 },
+      { "skill_group_code": "database", "weightage": 5 }
+    ],
+    "is_active": true
+  },
+  {
+    "profile_code": "SI",
+    "profile_title": "Specialist Infrastructure",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  },
+  {
+    "profile_code": "MXT",
+    "profile_title": "Manager Experience Technology",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  },
+  {
+    "profile_code": "SMXT",
+    "profile_title": "Senior Manager Experience Technology",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  },
+  {
+    "profile_code": "AT1",
+    "profile_title": "Associate Technology L1",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  },
+  {
+    "profile_code": "AT2",
+    "profile_title": "Associate Technology L2",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  },
+  {
+    "profile_code": "SAT1",
+    "profile_title": "Senior Associate Technology L1",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  },
+  {
+    "profile_code": "SAT2",
+    "profile_title": "Senior Associate Technology L2",
+    "skill_groups": [{ "skill_group_code": "", "weightage": null }],
+    "is_active": true
+  }
+]

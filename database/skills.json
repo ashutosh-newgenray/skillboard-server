@@ -1,0 +1,200 @@
+[
+  {
+    "skill_code": "algorithms",
+    "skill_label": "algorithms",
+    "feedback_frequency": 10,
+    "is_active": true
+  },
+  {
+    "skill_code": "analysis",
+    "skill_label": "analysis",
+    "feedback_frequency": 11,
+    "is_active": true
+  },
+  {
+    "skill_code": "architecture",
+    "skill_label": "architecture",
+    "feedback_frequency": 12,
+    "is_active": true
+  },
+  {
+    "skill_code": "hadoop",
+    "skill_label": "hadoop",
+    "feedback_frequency": 13,
+    "is_active": true
+  },
+  {
+    "skill_code": "hadoop",
+    "skill_label": "hadoop",
+    "feedback_frequency": 14,
+    "is_active": true
+  },
+  {
+    "skill_code": "html",
+    "skill_label": "html",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "html",
+    "skill_label": "html",
+    "feedback_frequency": 10,
+    "is_active": true
+  },
+  {
+    "skill_code": "java",
+    "skill_label": "java",
+    "feedback_frequency": 11,
+    "is_active": true
+  },
+  {
+    "skill_code": "middleware",
+    "skill_label": "middleware",
+    "feedback_frequency": 12,
+    "is_active": true
+  },
+  {
+    "skill_code": "modeling",
+    "skill_label": "modeling",
+    "feedback_frequency": 13,
+    "is_active": true
+  },
+  {
+    "skill_code": "mongodb",
+    "skill_label": "mongodb",
+    "feedback_frequency": 14,
+    "is_active": true
+  },
+  {
+    "skill_code": "mysql",
+    "skill_label": "mysql",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "python",
+    "skill_label": "python",
+    "feedback_frequency": 10,
+    "is_active": true
+  },
+  {
+    "skill_code": "sql",
+    "skill_label": "sql",
+    "feedback_frequency": 11,
+    "is_active": true
+  },
+  {
+    "skill_code": "sql_server",
+    "skill_label": "sql server",
+    "feedback_frequency": 12,
+    "is_active": true
+  },
+  {
+    "skill_code": "asp",
+    "skill_label": "asp",
+    "feedback_frequency": 13,
+    "is_active": true
+  },
+  {
+    "skill_code": "asp.net",
+    "skill_label": "asp.net",
+    "feedback_frequency": 14,
+    "is_active": true
+  },
+  {
+    "skill_code": "c#",
+    "skill_label": "c#",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "css",
+    "skill_label": "css",
+    "feedback_frequency": 10,
+    "is_active": true
+  },
+  {
+    "skill_code": "jquery",
+    "skill_label": "jquery",
+    "feedback_frequency": 11,
+    "is_active": true
+  },
+  {
+    "skill_code": "oracle",
+    "skill_label": "oracle",
+    "feedback_frequency": 12,
+    "is_active": true
+  },
+  {
+    "skill_code": "python",
+    "skill_label": "python",
+    "feedback_frequency": 13,
+    "is_active": true
+  },
+  {
+    "skill_code": "sas",
+    "skill_label": "sas",
+    "feedback_frequency": 14,
+    "is_active": true
+  },
+  {
+    "skill_code": "react",
+    "skill_label": "react",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "vue",
+    "skill_label": "vue",
+    "feedback_frequency": 10,
+    "is_active": true
+  },
+  {
+    "skill_code": "angular",
+    "skill_label": "angular",
+    "feedback_frequency": 11,
+    "is_active": true
+  },
+  {
+    "skill_code": "node",
+    "skill_label": "node",
+    "feedback_frequency": 12,
+    "is_active": true
+  },
+  {
+    "skill_code": "react_native",
+    "skill_label": "react native",
+    "feedback_frequency": 13,
+    "is_active": true
+  },
+  {
+    "skill_code": "flutter",
+    "skill_label": "flutter",
+    "feedback_frequency": 14,
+    "is_active": true
+  },
+  {
+    "skill_code": "dart",
+    "skill_label": "dart",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "seo",
+    "skill_label": "SEO",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "performance",
+    "skill_label": "Performance",
+    "feedback_frequency": 15,
+    "is_active": true
+  },
+  {
+    "skill_code": "security",
+    "skill_label": "Security",
+    "feedback_frequency": 15,
+    "is_active": true
+  }
+]
