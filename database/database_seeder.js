@@ -4,6 +4,7 @@ const TABLES = [
   "skill_profiles",
   "event_calendar",
   "profiles",
+  "feedback_questions",
 ];
 
 const seeder = function (db) {

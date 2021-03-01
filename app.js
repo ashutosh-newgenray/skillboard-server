@@ -10,6 +10,8 @@ var profileRouter = require("./routes/profiles");
 var skillRouter = require("./routes/skills");
 var settingsRouter = require("./routes/settings");
 var jobRouter = require("./routes/jobSchedular");
+var scheduledJob = require("./routes/scheduledJob");
+var questions = require("./routes/questions");
 
 var app = express();
 app.use(cors());
@@ -29,6 +31,8 @@ app.use("/profiles", profileRouter);
 app.use("/skills", skillRouter);
 app.use("/settings", settingsRouter);
 app.use("/jobs", jobRouter);
+app.use("/scheduledJob", scheduledJob);
+app.use("/questions", questions);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
