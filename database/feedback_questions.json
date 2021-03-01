@@ -4,8 +4,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -21,8 +20,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -30,8 +28,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -39,8 +36,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -48,8 +44,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -57,8 +52,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -66,8 +60,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on html on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+      }
     ]
   },
   {
@@ -75,8 +68,7 @@
     "questions": [
       {
         "q": "How much would you like to rate #PERSON on CSS on overall basis"
-      },
-      { "q": "How much would you like to rate #PERSON on CSS at coding level" }
+      }
     ]
   }
 ]
