@@ -3,16 +3,17 @@ const nodemailer = require("nodemailer");
 class Mailer {
   constructor() {
     this.transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
+      host: "smtp.gmail.com",
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "cyvhncpoz4te4227@ethereal.email", // generated ethereal user
-        pass: "SDYcTCE1pcqyJCq8DH", // generated ethereal password
+        user: "unbiased.skillboard@gmail.com", // generated ethereal user
+        pass: "Sapient@123", // generated ethereal password
       },
     });
   }
   async sendMail(data) {
+    console.log(data);
     try {
       const resp = await this.transporter.verify();
       if (!resp) {

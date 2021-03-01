@@ -1,0 +1,82 @@
+[
+  {
+    "skill": "html",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "react",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on react"
+      }
+    ]
+  },
+  {
+    "skill": "bootstrap",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "sitecore",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "PHP",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "C#",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "ASP.NET MVC",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "SQL",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on html on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on Html at coding level" }
+    ]
+  },
+  {
+    "skill": "CSS",
+    "questions": [
+      {
+        "q": "How much would you like to rate #PERSON on CSS on overall basis"
+      },
+      { "q": "How much would you like to rate #PERSON on CSS at coding level" }
+    ]
+  }
+]
