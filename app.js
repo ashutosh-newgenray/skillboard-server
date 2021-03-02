@@ -7,7 +7,9 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var profileRouter = require("./routes/profiles");
+var skillGroupRouter = require("./routes/skill_groups");
 var skillRouter = require("./routes/skills");
+var skillProfileRouter = require("./routes/skill_profiles");
 var settingsRouter = require("./routes/settings");
 var jobRouter = require("./routes/jobSchedular");
 var scheduledJob = require("./routes/scheduledJob");
@@ -30,6 +32,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/profiles", profileRouter);
 app.use("/skills", skillRouter);
+app.use("/skill_groups", skillGroupRouter);
+app.use("/skill_profiles", skillProfileRouter);
 app.use("/settings", settingsRouter);
 app.use("/jobs", jobRouter);
 app.use("/scheduledJob", scheduledJob);
